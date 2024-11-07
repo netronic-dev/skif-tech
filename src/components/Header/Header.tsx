@@ -1,4 +1,11 @@
-const Header = () => {
+import { FC } from "react";
+
+interface IHeader {
+  locale?: string;
+}
+
+const Header: FC<IHeader> = ({ locale }) => {
+  console.log(locale, "locale");
   return (
     <header>
       <div className="flex items-center gap-4">
